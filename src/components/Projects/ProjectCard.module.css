@@ -1,0 +1,98 @@
+@import '../../vars.css';
+.container {
+    /* border: 3px solid white; */
+    /* border: 3px solid orange; */
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(
+        180deg,
+        rgba(87, 108, 188, 1) 0%,
+        rgba(19, 42, 83, 1) 100%
+    );
+    background-repeat: no-repeat;
+    box-shadow: 0px 16px 14px 0 rgba(4, 21, 45, 1);
+    padding: 18px 24px;
+    max-width: 345px;
+    border-radius: 10px;
+    color: var(--color-text);
+    /* align-items: center; */
+    /* margin-top: 76px;
+    margin-left: 10%;
+    margin-right: 10%;
+    z-index: 1; */
+}
+
+.projectPic {
+    /* border: 3px solid pink; */
+    /* width: 90%; */
+    margin-bottom: 26px;
+}
+
+.title {
+    /* border: 3px solid green; */
+    font-size: 25px;
+    font-weight: 700;
+    font-family: var(--font-outfit);
+}
+
+.description {
+    /* border: 3px solid yellow; */
+    font-size: 25px;
+    font-weight: 400;
+    font-family: var(--font-outfit);
+}
+
+.stack {
+    /* border: 3px solid blue; */
+    width: 100%;
+    margin-top: 14px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+    list-style: none;
+}
+
+.stackItem {
+    /* border: 3px solid red; */
+    font-size: 25px;
+    font-weight: 400;
+    background: var(--color-dark);
+    border-radius: 100px;
+    padding: 2px 22px;
+}
+
+.links {
+    /* border: 3px solid red; */
+    width: 100%;
+    display: flex;
+    margin-top: 26px;
+    justify-content: space-around;
+}
+
+.linkBtn {
+    /* border: 3px solid red; */
+    background: var(--color-primary);
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 1px 22px;
+    border-radius: 100px;
+    color: var(--color-text);
+    cursor: pointer;
+    /* transition: all 0.3s ease; */
+}
+
+.container:hover {
+    background-size: 0 100%;
+    transition: background-size 0.5s ease;
+
+    .stackItem {
+        background: var(--color-secondary);
+    }
+}
+.linkBtn:hover {
+    background: var(--color-secondary);
+    transition: all 0.3s ease;
+}

@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Project A",
+        "img": "./assets/projects/project.png",
+        "desc": "wordswordswordswords",
+        "stack": ["React", "Express", "Node"],
+        "demo": "https://www.example.com",
+        "source": "https://www.example.com"
+    },
+    {
+        "title": "Project B",
+        "img": "./assets/projects/project.png",
+        "desc": "wordswordswordswords",
+        "stack": ["React", "Express", "Node"],
+        "demo": "https://www.example.com",
+        "source": "https://www.example.com"
+    },
+    {
+        "title": "Project C",
+        "img": "./assets/projects/project.png",
+        "desc": "wordswordswordswords",
+        "stack": ["React", "Express", "Node"],
+        "demo": "https://www.example.com",
+        "source": "https://www.example.com"
+    }
+]

@@ -1,0 +1,131 @@
+/** @format */
+@import '../../vars.css';
+
+.container {
+    /* border: 3px solid orange; */
+    position: relative;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    margin-top: 129px;
+    margin-left: 10%;
+    margin-right: 10%;
+    z-index: 1;
+    background-color: rgba(12, 12, 12, 0.6);
+    border-radius: 15px;
+    padding: 73px;
+    /* width: 80%; */
+    /* height: 80%; */
+}
+
+.title {
+    /* border: 3px solid green; */
+    font-size: 35px;
+    font-weight: 700;
+    font-family: var(--font-outfit);
+    letter-spacing: 1.75px;
+    color: var(--color-text);
+    text-transform: uppercase;
+    /* margin-bottom: 33px; */
+    width: 130px;
+    /* margin-top: 53px; */
+    /* margin-left: 73px; */
+}
+
+.content {
+    /* border: 3px solid red; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1;
+    width: 100%;
+    /* justify-content: center; */
+}
+
+.aboutPic {
+    /* border: 3px solid pink; */
+    width: 35%;
+    border-radius: 1%;
+    /* position: relative; */
+    align-self: center;
+    /* aspect-ratio: 1/1; */
+    /* z-index: 1; */
+}
+
+.aboutContent {
+    /* border: 3px solid lightblue; */
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 55%;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.aboutText {
+    /* border: 3px solid lightgreen; */
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    border-radius: 20px;
+    padding: 25px;
+    align-items: center;
+    /* left: -25px; */
+    background-image: linear-gradient(
+        90deg,
+        rgba(165, 215, 232, 0.42) 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+}
+
+.aboutText:hover {
+    background-size: 100% 100%;
+    transition: background-size 0.5s ease;
+}
+
+.aboutItems img {
+    /* border: 3px solid blue; */
+    /* width: 30px; */
+    /* left: -25px; */
+}
+
+.aboutItems h3 {
+    /* border: 3px solid purple; */
+    font-size: 25px;
+    font-weight: 600;
+    /* width: 249px; */
+}
+
+.aboutItems p {
+    /* border: 3px solid purple; */
+    font-size: 25px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 830px) {
+    .container {
+        background-color: transparent;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .aboutPic {
+        display: none;
+    }
+
+    .aboutText {
+        margin-top: 29px;
+    }
+
+    .aboutItems {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

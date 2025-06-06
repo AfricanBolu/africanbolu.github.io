@@ -1,40 +1,40 @@
 # Logs and Debugging
-logs/           # Ignores any 'logs' directory
-*.log           # Catches all files ending with .log
-*.suo           # Visual Studio solution user options file
-*.ntvs* # Node.js Tools for Visual Studio files
-*.njsproj       # Node.js project file
-*.sln           # Visual Studio solution file
-*.sw?           # Swap files created by Vim/NeoVim
+logs/
+*.log
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
 # Dependency Directories
-node_modules/   # Ignore the node_modules folder (anywhere)
-node_modules/.cache/  # To ignore modules cache to prevent cloning
-.pnp/           # Yarn PnP folder
-.pnp.js         # Yarn PnP file
+node_modules/
+node_modules/.cache/
+.pnp/
+.pnp.js
 
 # Build Output
-dist/           # Vite's default build output folder (anywhere)
-dist-ssr/       # Vite SSR build output
-/build          # Common build folder name
-/out            # Another common build folder name
+dist/
+dist-ssr/
+/build
+/out
 
 # Local Configuration Files
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
-.env*.local     # Catches any .env file followed by .local and anything in between
-.local          # General local configuration files
+.env*.local
+.local
 
 # Editor and IDE Specific
-.vscode/        # Ignore the .vscode directory (except for specific un-ignored files)
-!.vscode/extensions.json # Don't ignore this specific file (if you want to share recommended extensions)
-.idea/          # JetBrains IDEs (IntelliJ, WebStorm) configuration folder
-.DS_Store       # macOS specific folder metadata
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
 
 # Test and Coverage
-/coverage       # Test coverage reports
+/coverage
 
 # Other misc. generated files
-/public         # If your public folder contains generated assets you don't want to track
+/public

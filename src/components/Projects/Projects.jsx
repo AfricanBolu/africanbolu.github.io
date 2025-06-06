@@ -1,5 +1,5 @@
 import 'react';
-import projects from '../../data/projects.json';
+import { projects } from '../../data/projects.js';
 import styles from './Projects.module.css';
 import ProjectCard from './ProjectCard';
 // import projectPic from '../../../assets/projects/project.png';

@@ -3,8 +3,8 @@
 import { useState } from 'react';
 import styles from './NavBar.module.css';
 // import { getImageUrl } from '../../utils';
-import closeIcon from '../../../assets/nav/closeIcon.png';
-import menuIcon from '../../../assets/nav/menuIcon.png';
+import closeIcon from '../../assets/nav/closeIcon.png';
+import menuIcon from '../../assets/nav/menuIcon.png';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);

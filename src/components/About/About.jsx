@@ -3,10 +3,10 @@
 import 'react';
 import styles from './About.module.css';
 // import { getImageUrl } from '../../utils';
-import profilePic from '../../../assets/hero/profile-pic.png';
-import cursor from '../../../assets/about/cursorIcon.png';
-import server from '../../../assets/about/serverIcon.png';
-import ui from '../../../assets/about/uiIcon.png';
+import profilePic from '../../assets/hero/profile-pic.png';
+import cursor from '../../assets/about/cursorIcon.png';
+import server from '../../assets/about/serverIcon.png';
+import ui from '../../assets/about/uiIcon.png';
 
 const About = () => {
   return (

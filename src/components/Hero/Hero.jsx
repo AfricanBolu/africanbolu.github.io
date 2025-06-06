@@ -4,7 +4,7 @@
 import 'react';
 import styles from './Hero.module.css';
 // import { getImageUrl } from '../../utils';
-import heroPic from '../../../assets/hero/Bolu-pic.png';
+import heroPic from '../../assets/hero/Bolu-pic.png';
 
 const Hero = () => {
   return (

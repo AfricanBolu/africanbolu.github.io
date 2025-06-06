@@ -1,8 +1,8 @@
 import 'react';
 import styles from './Contact.module.css';
-import contactPic from '../../../assets/contact/emailIcon.png';
-import linkedinPic from '../../../assets/contact/linkedinIcon.png';
-import githubPic from '../../../assets/contact/githubIcon.png';
+import contactPic from '../../assets/contact/emailIcon.png';
+import linkedinPic from '../../assets/contact/linkedinIcon.png';
+import githubPic from '../../assets/contact/githubIcon.png';
 
 const Contact = () => {
   return (

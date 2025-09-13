@@ -2,18 +2,19 @@ import projectImg from '../assets/projects/project.png';
 
 export const projects = [
     {
-        title: 'Project A',
+        title: 'Book Recommender',
         img: projectImg,
-        desc: 'wordswordswordswords',
-        stack: ['React', 'Express', 'Node'],
+        desc: 'Recommends books using semantic search based on user input.',
+        stack: ['Python', 'LangChain', 'Gradio'],
         demo: 'https://www.example.com',
         source: 'https://www.example.com',
     },
     {
-        title: 'Project B',
+        title: 'Movie Chatbot',
         img: projectImg,
-        desc: 'wordswordswordswords',
-        stack: ['React', 'Express', 'Node'],
+        desc: 'AI chatbot that recommends movies based on user input.\
+        Using The Movie Database (TMDb) API to fetch movie data.',
+        stack: ['TMDB', 'Python', 'OPENAI', 'LangChain', 'HuggingFace'],
         demo: 'https://www.example.com',
         source: 'https://www.example.com',
     },

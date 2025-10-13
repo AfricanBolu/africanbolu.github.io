@@ -1,26 +1,27 @@
-import projectImg from '../assets/projects/project.png';
+import defaultImg from '../assets/projects/project.png';
+import bookRecommender from '../assets/projects/Book_Recommender.png';
 
 export const projects = [
     {
-        title: 'Project A',
-        img: projectImg,
-        desc: 'wordswordswordswords',
-        stack: ['React', 'Express', 'Node'],
+        title: 'Book Recommender',
+        img: bookRecommender,
+        desc: 'Recommends books using semantic search based on user input.',
+        stack: ['Python', 'LangChain', 'Gradio', 'OPENAI', 'HuggingFace'],
+        demo: 'https://www.youtube.com/watch?v=M-BcuUD7d1c',
+        source: 'https://huggingface.co/spaces/ItzBombo/Book-Recommender',
+    },
+    {
+        title: 'Movie Chatbot',
+        img: defaultImg,
+        desc: 'AI chatbot that recommends movies using TMDb API and natural language input.',
+        stack: ['TMDB', 'Python', 'OPENAI', 'LangChain', 'HuggingFace'],
         demo: 'https://www.example.com',
         source: 'https://www.example.com',
     },
     {
-        title: 'Project B',
-        img: projectImg,
-        desc: 'wordswordswordswords',
-        stack: ['React', 'Express', 'Node'],
-        demo: 'https://www.example.com',
-        source: 'https://www.example.com',
-    },
-    {
-        title: 'Project C',
-        img: projectImg,
-        desc: 'wordswordswordswords',
+        title: 'BudgetYou',
+        img: defaultImg,
+        desc: 'Smart budgeting app with AI-powered savings tips and customizable budget plans.',
         stack: ['React', 'Express', 'Node'],
         demo: 'https://www.example.com',
         source: 'https://www.example.com',

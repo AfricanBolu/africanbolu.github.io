@@ -38,3 +38,7 @@ dist-ssr/
 
 # Other misc. generated files
 /public
+
+# virtua env
+.venv/
+venv/

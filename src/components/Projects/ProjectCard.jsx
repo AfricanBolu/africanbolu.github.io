@@ -5,7 +5,7 @@ import styles from './ProjectCard.module.css';
 const ProjectCard = ({ project: { title, img, desc, stack, demo, source } }) => {
   return (
     <div className={styles.container}>
-      <img src={img} alt={`Temp image of ${title} `} className={styles.projectPic} />
+      <img src={img} alt={`Image of project ${title} `} className={styles.projectPic} />
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.description}>{desc}</p>
       <ul className={styles.stack}>
@@ -16,10 +16,10 @@ const ProjectCard = ({ project: { title, img, desc, stack, demo, source } }) => 
         ))}
       </ul>
       <div className={styles.links}>
-        <a href={demo} className={styles.linkBtn}>
+        <a href={demo} className={styles.linkBtn} target="_blank">
           Demo
         </a>
-        <a href={source} className={styles.linkBtn}>
+        <a href={source} className={styles.linkBtn} target="_blank">
           Source
         </a>
       </div>

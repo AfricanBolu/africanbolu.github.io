@@ -1,6 +1,6 @@
 @import '../../vars.css';
 .container {
-    border: 3px solid white;
+    /* border: 3px solid white; */
     /* border: 3px solid orange; */
     /* position: relative; */
     display: flex;
@@ -24,13 +24,17 @@
 }
 
 .projectPic {
-    border: 3px solid pink;
-    /* width: 90%; */
+    /* border: 3px solid pink; */
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    max-height: 250px;
     margin-bottom: 26px;
 }
 
 .title {
-    border: 3px solid green;
+    /* border: 3px solid green; */
     font-size: 25px;
     font-weight: 700;
     font-family: var(--font-outfit);
@@ -38,7 +42,7 @@
 }
 
 .description {
-    border: 3px solid yellow;
+    /* border: 3px solid yellow; */
     font-size: 25px;
     font-weight: 400;
     font-family: var(--font-outfit);
@@ -52,7 +56,7 @@
 }
 
 .stack {
-    border: 3px solid blue;
+    /* border: 3px solid blue; */
     width: 100%;
     margin-top: 14px;
     display: flex;

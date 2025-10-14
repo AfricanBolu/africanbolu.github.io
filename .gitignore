@@ -37,7 +37,7 @@ dist-ssr/
 /coverage
 
 # Other misc. generated files
-/public
+# /public
 
 # virtua env
 .venv/

@@ -1,6 +1,5 @@
 /** @format */
 
-import 'react';
 import styles from './About.module.css';
 import profilePic from '../../assets/hero/profile-pic.png';
 import {CodeIcon, DatabaseIcon, CpuIcon } from '@phosphor-icons/react';
@@ -14,7 +13,7 @@ const About = () => {
         <ul className={styles.aboutContent}>
           <li className={styles.aboutText}>
             <div className={styles.iconWrapper}>
-              <CodeIcon size={45} color='#0490fb' weight="bold" />
+              <CodeIcon size={45} color='#19376d' weight="bold" />
             </div>
             <div className={styles.aboutItems}>
               <h3>Software Engineer</h3>
@@ -26,7 +25,7 @@ const About = () => {
           </li>
           <li className={styles.aboutText}>
             <div className={styles.iconWrapper}>
-              <DatabaseIcon size={45} color='#0490fb' weight="bold" />
+              <DatabaseIcon size={45} color='#19376d' weight="bold" />
             </div>
             <div className={styles.aboutItems}>
               <h3>Backend & Systems</h3>
@@ -38,7 +37,7 @@ const About = () => {
           </li>
           <li className={styles.aboutText}>
             <div className={styles.iconWrapper}>
-              <CpuIcon size={45} color='#0490fb' weight="bold" />
+              <CpuIcon size={45} color='#19376d' weight="bold" />
             </div>
             <div className={styles.aboutItems}>
               <h3>AI-Powered Applications</h3>

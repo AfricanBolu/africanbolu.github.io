@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 /** @format */
 
-import 'react';
 import styles from './Hero.module.css';
 // import { getImageUrl } from '../../utils';
 import heroPic from '../../assets/hero/Bolu-pic.png';

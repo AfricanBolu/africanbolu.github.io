@@ -72,9 +72,21 @@
 
 	.linkBtn {
 		display: block;
+		background: none;
+		border: none;
+		padding: 0;
 		cursor: pointer;
-		width: 40px;
-		height: 40px;
+	}
+
+	.linkBtn:focus {
+		outline: 2px solid var(--color-primary);
+		outline-offset: 4px;
+	}
+
+	.linkBtn img {
+		display: block;
+		width: 100%;
+		height: 100%;
 	}
 
 	.linklist {
@@ -98,7 +110,7 @@
 	}
 
 	.linklist a:hover {
-		color: var(--color-primary);
+		/* color: var(--color-primary); */
 		font-size: 1.25rem;
 	}
 

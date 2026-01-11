@@ -6,23 +6,24 @@
     justify-content: space-evenly;
     align-items: center;
     color: var(--color-text);
-    margin-top: 120px;
-    width: 100vw;
-    padding: 58px 10%;
-    gap: 10px;
+    margin-top: 8rem;
+    width: 100%;
+    padding: 2.5rem 10%;
+    gap: 1.5rem;
     background-color: var(--color-secondary);
 }
 
 .content h2 {
-    font-size: 80px;
+    font-size: 2rem;
     font-weight: 700;
     letter-spacing: 2px;
+    margin-bottom: 1rem;
 }
 
 .content p {
-    font-size: 50px;
+    font-size: 1.115rem;
     font-weight: 400;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 .links {
@@ -30,35 +31,65 @@
     flex-direction: column;
     align-items: flex-start;
     list-style: none;
-    gap: 26px;
+    gap: 1.5rem;
 }
+
 .link {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.link:hover {
+    transform: translateX(5px);
 }
 
 .link a {
     color: var(--color-text);
     text-decoration: none;
-    font-size: 30px;
+    font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: 1.5px;
+    transition: color 0.2s ease;
+}
+
+.link a:hover {
+    color: var(--color-primary);
+}
+
+.link img {
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 @media screen and (max-width: 830px) {
     .container {
         flex-direction: column;
-        gap: 23px;
+        gap: 2rem;
+        padding: 3rem 10%;
     }
 
     .content {
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
+    }
+
+    .content h2 {
+        font-size: 2.5rem;
+    }
+
+    content p {
+        font-size: 1.125rem;
     }
 
     .links {
         align-items: center;
+    }
+
+    .links a {
+        font-size: 1.25rem;
     }
 }

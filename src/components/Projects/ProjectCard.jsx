@@ -1,4 +1,3 @@
-import 'react';
 import PropTypes from 'prop-types';
 import styles from './ProjectCard.module.css';
 

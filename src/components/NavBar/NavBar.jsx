@@ -20,12 +20,17 @@ const NavBar = () => {
         BOLU
       </a>
       <div className={styles.links}>
-        <img
+        <button
+          onClick={() => setIsOpen(!isOpen)}
           className={styles.linkBtn}
+          aria-label={isOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={isOpen}
+        >
+          <img
           src={isOpen ? closeIcon : menuIcon}
           alt="menu-button"
-          onClick={() => setIsOpen(!isOpen)}
         />
+        </button>
         <ul className={`${styles.linklist} ${isOpen && styles.active}`} onClick={() => setIsOpen(false)}>
           <li>
             <a href="#about">About</a>

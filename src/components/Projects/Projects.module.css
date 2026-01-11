@@ -24,12 +24,30 @@
 }
 
 .projects {
-    /* border: 3px solid red; */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
     width: 100%;
+    margin-top: 3rem;
+}
+
+/* For larger screens, limit to 3 columns max */
+@media screen and (min-width: 1200px) {
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* For medium screens, 2 columns */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* For small screens, 1 column */
+@media screen and (max-width: 767px) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
 }

@@ -1,5 +1,6 @@
 import defaultImg from '../assets/projects/project.png';
 import bookRecommender from '../assets/projects/Book_Recommender.png';
+import jobTrackr from '../assets/projects/Job Trackr.png'
 
 export const projects = [
     {
@@ -10,14 +11,14 @@ export const projects = [
         demo: 'https://www.youtube.com/watch?v=M-BcuUD7d1c',
         source: 'https://huggingface.co/spaces/ItzBombo/Book-Recommender',
     },
-    {
-        title: 'Movie Chatbot',
-        img: defaultImg,
-        desc: 'AI chatbot that recommends movies using TMDb API and natural language input.',
-        stack: ['TMDB', 'Python', 'OPENAI', 'LangChain', 'HuggingFace'],
-        demo: 'https://www.example.com',
-        source: 'https://www.example.com',
-    },
+    // {
+    //     title: 'Movie Chatbot',
+    //     img: defaultImg,
+    //     desc: 'AI chatbot that recommends movies using TMDb API and natural language input.',
+    //     stack: ['TMDB', 'Python', 'OPENAI', 'LangChain', 'HuggingFace'],
+    //     demo: 'https://www.example.com',
+    //     source: 'https://www.example.com',
+    // },
     // {
     //     title: 'BudgetYou',
     //     img: defaultImg,
@@ -27,11 +28,11 @@ export const projects = [
     //     source: 'https://www.example.com',
     // },
     {
-        title: 'Job Saver Extension',
-        img: defaultImg,
+        title: 'Job Trackr Extension',
+        img: jobTrackr,
         desc: 'Browser extension to save and organize job listings from various websites.',
         stack: ['React', 'Google Sheets', 'Node', 'TypeScript'],
-        demo: 'https://www.example.com',
-        source: 'https://www.example.com',
+        demo: 'https://youtu.be/DJp19Z-KiNs',
+        source: 'https://github.com/AfricanBolu/JobTrackr/tree/main',
     },
 ];

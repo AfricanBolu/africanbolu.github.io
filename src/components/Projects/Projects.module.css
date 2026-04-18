@@ -1,53 +1,34 @@
-@import '../../vars.css';
+@import "../../vars.css";
+
 .container {
-    /* border: 3px solid orange; */
-    /* position: relative; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: center; */
-    margin-top: 76px;
-    margin-left: 10%;
-    margin-right: 10%;
-    z-index: 1;
+  margin-top: 76px;
+  margin-left: 10%;
+  margin-right: 10%;
+  z-index: 1;
 }
 
 .title {
-    /* border: 3px solid green; */
-    font-size: 35px;
-    font-weight: 700;
-    font-family: var(--font-outfit);
-    letter-spacing: 1.75px;
-    color: var(--color-text);
-    text-transform: uppercase;
-    /* margin-bottom: 33px; */
-    width: 188px;
+  font-size: 35px;
+  font-weight: 700;
+  font-family: var(--font-outfit);
+  letter-spacing: 1.75px;
+  color: var(--color-text);
+  text-transform: uppercase;
+  width: 188px;
+}
+
+.projectsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-    width: 100%;
-    margin-top: 3rem;
-}
-
-/* For larger screens, limit to 3 columns max */
-@media screen and (min-width: 1200px) {
-    .projects {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* For medium screens, 2 columns */
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-    .projects {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* For small screens, 1 column */
-@media screen and (max-width: 767px) {
-    .projects {
-        grid-template-columns: 1fr;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* This centers 1, 2, or 3+ projects dynamically */
+  gap: 2rem;
+  width: 100%;
+  margin-top: 3rem;
 }

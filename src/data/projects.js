@@ -1,4 +1,4 @@
-import defaultImg from '../assets/projects/project.png';
+// import defaultImg from '../assets/projects/project.png';
 import bookRecommender from '../assets/projects/Book_Recommender.png';
 import jobTrackr from '../assets/projects/Job Trackr.png'
 

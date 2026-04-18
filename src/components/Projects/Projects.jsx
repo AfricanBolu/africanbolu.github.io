@@ -1,6 +1,6 @@
-import { projects } from '../../data/projects.js';
-import styles from './Projects.module.css';
-import ProjectCard from './ProjectCard';
+import { projects } from "../../data/projects.js";
+import styles from "./Projects.module.css";
+import ProjectCard from "./ProjectCard";
 // import projectPic from '../../../assets/projects/project.png';
 
 const Projects = () => {
@@ -8,10 +8,12 @@ const Projects = () => {
   return (
     <section className={styles.container} id="projects">
       <h2 className={styles.title}>PROJECT</h2>
-      <div className={styles.projects}>
-        {projects.map((project, id) => {
-          return <ProjectCard key={id} project={project} />;
-        })}
+      <div className={styles.projectsContainer}>
+        <div className={styles.projects}>
+          {projects.map((project, id) => {
+            return <ProjectCard key={id} project={project} />;
+          })}
+        </div>
       </div>
     </section>
   );

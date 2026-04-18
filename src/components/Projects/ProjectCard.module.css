@@ -1,123 +1,124 @@
-@import '../../vars.css';
+@import "../../vars.css";
 .container {
-    /* border: 3px solid white; */
-    /* border: 3px solid orange; */
-    /* position: relative; */
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(
-        180deg,
-        rgba(87, 108, 188, 1) 0%,
-        rgba(19, 42, 83, 1) 100%
-    );
-    /* background-repeat: no-repeat; */
-    box-shadow: 0px 16px 14px 0 rgba(4, 21, 45, 1);
-    padding: 1.5rem;
-    /* max-width: 550px; */
-    border-radius: 10px;
-    color: var(--color-text);
-    /* align-items: center; */
-    height: 100%;
-    /* margin-top: 76px;
+  /* border: 3px solid white; */
+  /* border: 3px solid orange; */
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    180deg,
+    rgba(87, 108, 188, 1) 0%,
+    rgba(19, 42, 83, 1) 100%
+  );
+  /* background-repeat: no-repeat; */
+  box-shadow: 0px 16px 14px 0 rgba(4, 21, 45, 1);
+  padding: 1.5rem;
+  /* max-width: 550px; */
+  border-radius: 10px;
+  color: var(--color-text);
+  /* align-items: center; */
+  height: 100%;
+  /* margin-top: 76px;
     margin-left: 10%;
     margin-right: 10%;
     z-index: 1; */
+  width: 350px; /* Adjust this pixel value to match the exact size you prefer */
+  max-width: 100%; /* Ensures the card shrinks gracefully on narrow phone screens */
 }
 
 .projectPic {
-    /* border: 3px solid pink; */
-    width: 100%;
-    /* height: auto; */
-    border-radius: 10px;
-    object-fit: cover;
-    /* max-height: 250px; */
-    margin-bottom: 1rem;
-    aspect-ratio: 16/9;
+  /* border: 3px solid pink; */
+  width: 100%;
+  /* height: auto; */
+  border-radius: 10px;
+  object-fit: cover;
+  /* max-height: 250px; */
+  margin-bottom: 1rem;
+  aspect-ratio: 16/9;
 }
 
 .title {
-    /* border: 3px solid green; */
-    font-size: 1.5rem;
-    font-weight: 700;
-    font-family: var(--font-outfit);
-    text-align: center;
-    margin-bottom: 0.5rem;
+  /* border: 3px solid green; */
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: var(--font-outfit);
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 .description {
-    /* border: 3px solid yellow; */
-    font-size: 1rem;
-    font-weight: 400;
-    font-family: var(--font-outfit);
-    text-align: center;
-    display: -webkit-box;
-    line-clamp: 3;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    flex-grow: 1;
+  /* border: 3px solid yellow; */
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: var(--font-outfit);
+  text-align: center;
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
 }
 
 .stack {
-    /* border: 3px solid blue; */
-    width: 100%;
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    /* align-items: center; */
-    list-style: none;
-    /* padding: 0 4px; */
-    justify-content: center;
+  /* border: 3px solid blue; */
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  /* align-items: center; */
+  list-style: none;
+  /* padding: 0 4px; */
+  justify-content: center;
 }
 
 .stackItem {
-    /* border: 2.5px dotted lime; */
-    font-size: 0.875rem;
-    font-weight: 400;
-    background: var(--color-dark);
-    border-radius: 100px;
-    padding: 0.25rem 0.75rem;
-    transition: background 0.3s ease;
+  /* border: 2.5px dotted lime; */
+  font-size: 0.875rem;
+  font-weight: 400;
+  background: var(--color-dark);
+  border-radius: 100px;
+  padding: 0.25rem 0.75rem;
+  transition: background 0.3s ease;
 }
 
 .links {
-    /* border: 3px solid brown; */
-    width: 100%;
-    display: flex;
-    margin-top: 1.5rem;
-    justify-content: center;
-    gap: 1rem;
+  /* border: 3px solid brown; */
+  width: 100%;
+  display: flex;
+  margin-top: 1.5rem;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .linkBtn {
-    /* border: 3px solid red; */
-    background: var(--color-primary);
-    font-size: 1rem;
-    font-weight: 600;
-    text-decoration: none;
-    padding: 0.5rem 1.5rem;
-    border-radius: 100px;
-    color: var(--color-text);
-    cursor: pointer;
-    transition: all 0.3s ease;
+  /* border: 3px solid red; */
+  background: var(--color-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 100px;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-
 .container:hover {
-    transform: translateY(-5px); /* Subtle lift on hover */
-    /* transition: transform 0.3s ease; */
-    transition: transform 0.5s ease;
+  transform: translateY(-5px); /* Subtle lift on hover */
+  /* transition: transform 0.3s ease; */
+  transition: transform 0.5s ease;
 
-    .stackItem {
-        background: var(--color-secondary);
-    }
+  .stackItem {
+    background: var(--color-secondary);
+  }
 }
 
 .linkBtn:hover {
-    background: var(--color-secondary);
-    transition: all 0.3s ease;
-    transform: scale(1.05)
+  background: var(--color-secondary);
+  transition: all 0.3s ease;
+  transform: scale(1.05);
 }

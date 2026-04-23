@@ -7,17 +7,24 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 61px;
+	padding: 3.8rem;
 	z-index: 2;
-	margin: 0 10%;
+	margin-inline: auto;
+	padding-inline: 10%;
+	max-width: 1400px;
 }
 
 .logo {
-	font-size: 30px;
+	font-size: 1.875rem;
 	font-weight: 600;
 	text-decoration: none;
 	color: var(--color-text);
 	font-family: var(--font-roboto);
+	transition: color 0.3s ease;
+}
+
+.logo:hover {
+	color: var(--color-primary);
 }
 
 .links {
@@ -27,14 +34,14 @@
 .linklist {
 	display: flex;
 	list-style: none;
-	gap: 47px;
+	gap: 2.9rem;
 }
 
 .linklist a {
-	font-size: 25px;
+	font-size: 1.5rem;
 	text-decoration: none;
 	color: var(--color-text);
-	transition: all 0.3s ease;
+	transition: color 0.3s ease;
 }
 
 .linklist a:hover {
@@ -44,32 +51,49 @@
 .linkBtn {
 	display: none;
 }
+
 @media screen and (max-width: 830px) {
 	.navbar {
 		flex-direction: column;
 		align-items: flex-start;
+		padding: 2rem 0;
 	}
 
 	.links {
 		position: absolute;
 		right: 0;
+		top: 2rem;
 		margin-right: 10%;
 		flex-direction: column;
 		align-items: flex-end;
-		gap: 11px;
+		gap: 0.7rem;
 		z-index: 3;
 	}
 
 	.linkBtn {
 		display: block;
+		background: none;
+		border: none;
+		padding: 0;
 		cursor: pointer;
+	}
+
+	.linkBtn:focus {
+		outline: 2px solid var(--color-primary);
+		outline-offset: 4px;
+	}
+
+	.linkBtn img {
+		display: block;
+		width: 100%;
+		height: 100%;
 	}
 
 	.linklist {
 		display: none;
 		flex-direction: column;
 		align-items: center;
-		gap: 13px;
+		gap: 0.8rem;
 		border-radius: 10px;
 		background: rgb(25, 55, 109);
 		background: linear-gradient(
@@ -77,15 +101,24 @@
 			rgba(25, 55, 109, 0.2) 0%,
 			rgba(25, 55, 109, 1) 100%
 		);
-		padding: 24px 33px;
+		padding: 1.5rem 2rem;
 		box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+		transition: opacity 0.3s ease, transform 0.3s ease;
+		opacity: 0;
+		transform: translateY(-10px);
+		pointer-events: none;
 	}
 
-	.linklista:hover {
-		color: var(--color-primary);
+	.linklist a:hover {
+		/* color: var(--color-primary); */
+		font-size: 1.25rem;
 	}
+
 	.active {
 		display: flex;
+		opacity: 1;
+		transform: translateY(0);
+		pointer-events: auto;
 		z-index: 1;
 	}
 }

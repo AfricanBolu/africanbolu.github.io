@@ -1,12 +1,8 @@
 /** @format */
 
-import 'react';
 import styles from './About.module.css';
-// import { getImageUrl } from '../../utils';
 import profilePic from '../../assets/hero/profile-pic.png';
-import cursor from '../../assets/about/cursorIcon.png';
-import server from '../../assets/about/serverIcon.png';
-import ui from '../../assets/about/uiIcon.png';
+import {CodeIcon, DatabaseIcon, CpuIcon } from '@phosphor-icons/react';
 
 const About = () => {
   return (
@@ -16,24 +12,39 @@ const About = () => {
         <img src={profilePic} alt="about-img" className={styles.aboutPic} />
         <ul className={styles.aboutContent}>
           <li className={styles.aboutText}>
-            <img src={cursor} alt="cursor-icon" className={styles.cursor} />
+            <div className={styles.iconWrapper}>
+              <CodeIcon size={45} color='#19376d' weight="bold" />
+            </div>
             <div className={styles.aboutItems}>
-              <h3>Frontend Developer</h3>
-              <p>wordswordswordswords</p>
+              <h3>Software Engineer</h3>
+              <p>
+                I build maintainable software with clean architecture and great UX. 
+                I love diving deep into application logic and understanding systems from the ground up.
+              </p>
             </div>
           </li>
           <li className={styles.aboutText}>
-            <img src={server} alt="server-icon" className={styles.cursor} />
+            <div className={styles.iconWrapper}>
+              <DatabaseIcon size={45} color='#19376d' weight="bold" />
+            </div>
             <div className={styles.aboutItems}>
-              <h3>Backend Developer</h3>
-              <p>wordswordswordswords</p>
+              <h3>Backend & Systems</h3>
+              <p>
+                I design APIs, optimize data flow, and build reliable backend systems. 
+                My focus is on performance, concurrency, and creating systems that are easy to reason about.
+              </p>
             </div>
           </li>
           <li className={styles.aboutText}>
-            <img src={ui} alt="ui-icon" className={styles.cursor} />
+            <div className={styles.iconWrapper}>
+              <CpuIcon size={45} color='#19376d' weight="bold" />
+            </div>
             <div className={styles.aboutItems}>
-              <h3>Fullstack Developer</h3>
-              <p>wordswordswordswords</p>
+              <h3>AI-Powered Applications</h3>
+              <p>
+                I integrate AI capabilities into practical applications for automation and user-facing tools. 
+                I focus on real-world implementation rather than research-level development.
+              </p>
             </div>
           </li>
         </ul>

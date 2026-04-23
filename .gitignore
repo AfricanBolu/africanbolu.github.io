@@ -42,3 +42,7 @@ dist-ssr/
 # virtua env
 .venv/
 venv/
+
+
+#json files
+jsconfig*.json

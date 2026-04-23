@@ -5,23 +5,26 @@ import styles from './Skills.module.css';
 const Skills = () => {
   return (
     <section className={styles.container} id="skills">
-      <h2 className={styles.title}>SKILLS & TECHNOLOGIES</h2>
+      <h2 className={styles.title}>Tech Stack</h2>
       <div className={styles.skillsGrid}>
         <div className={styles.category}>
-          <h3>Frontend</h3>
+          <h3>Web Development</h3>
           <ul>
+            <li>TypeScript</li>
+            <li>Node.js</li>
             <li>React</li>
-            <li>JavaScript</li>
-            <li>HTML/CSS</li>
-            <li>Tailwind</li>
+            <li>Python</li>
+            <li>Java / Spring Boot</li>
           </ul>
         </div>
         <div className={styles.category}>
-          <h3>Backend</h3>
+          <h3>AI & Machine Learning</h3>
           <ul>
-            <li>Node.js</li>
-            <li>Python</li>
-            <li>APIs</li>
+            <li>LangChain</li>
+            <li>OpenAI</li>
+            <li>TensorFlow</li>
+            <li>PyTorch</li>
+            <li>Computer Vision</li>
           </ul>
         </div>
         <div className={styles.category}>
@@ -30,6 +33,8 @@ const Skills = () => {
             <li>Git/GitHub</li>
             <li>VS Code</li>
             <li>PostgreSQL</li>
+            <li>CI/CD Pipeline</li>
+            <li>Docker</li>
           </ul>
         </div>
       </div>

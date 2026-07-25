@@ -19,54 +19,66 @@
   ul { padding-left: 1.25rem; }
   li { margin-bottom: 0.4rem; }
   a { color: #2563eb; }
-  code { background: #f1f5f9; padding: 0.1rem 0.3rem; border-radius: 4px; }
+  code { background: #f1f5f9; padding: 0.1rem 0.3rem; border-radius: 4px; font-size: 0.9em; }
 </style>
 </head>
 <body>
 
 <h1>JobTrackr — Privacy Policy</h1>
-<p class="updated">Last updated: July 20, 2026</p>
+<p class="updated">Last updated: July 25, 2026</p>
 
 <p>JobTrackr ("the extension," "we," "our") is a browser extension that helps you track job applications by detecting job postings as you browse and saving them to a Google Sheet that you own and control. This policy explains what data the extension handles, how it is used, and what it is never used for.</p>
 
 <h2>Summary</h2>
-<p>JobTrackr reads job-posting information from pages you visit and writes it only to the Google Sheet you connect. It does not collect your personal data, does not sell or share your data with third parties, and does not track your browsing for advertising or analytics.</p>
+<p>JobTrackr reads job-posting information from pages you visit and writes it directly to a Google Sheet in your own Google Drive, using your own Google account. The developer does not operate any server that receives, stores, or processes your data. We do not collect your personal data, do not sell or share your data with third parties, and do not track your browsing for advertising or analytics.</p>
 
 <h2>What the extension accesses</h2>
-<p><strong>Job-posting information.</strong> When you view a job posting on a supported site or a page that publishes standard job-posting data, JobTrackr reads publicly available details from that page — such as the job title, company name, location, posting URL, and (where available) salary. This information is read only to let you save it to your own tracker.</p>
-<p><strong>Your Google Sheet URL.</strong> You provide the URL of a Google Sheet you own so the extension can write your saved applications to it. This URL is stored locally in your browser and is used only to sync your data to that sheet.</p>
+<p><strong>Job-posting information.</strong> When you view a job posting on a supported site or a page that publishes standard job-posting data, JobTrackr reads publicly available details from that page — such as the job title, company name, location, posting URL, and (where available) salary. This information is read only so that you can save it to your own tracker.</p>
+
+<p><strong>Your Google account, with your permission.</strong> To write to a spreadsheet you own, the extension asks you to sign in with Google. Signing in is entirely optional and is initiated only when you click "Sign in with Google" in the extension's settings. Google then issues a temporary access token to the extension.</p>
+
 <p><strong>Data you enter.</strong> If you add or edit an application manually, the information you type is treated the same way as detected job data — saved to your Google Sheet.</p>
 
-<h2>How your data is used</h2>
-<p>The only thing JobTrackr does with the information above is save your job applications to the Google Sheet you designate. Data flows from the page you are viewing (or the form you fill in) to your own spreadsheet. That is the entire purpose of the extension.</p>
+<h2>Google account access and permissions</h2>
+<p>JobTrackr requests only the <code>drive.file</code> scope. This is the narrowest Google Drive permission available for this purpose: it grants the extension access <strong>only to files the extension itself creates</strong>. The extension cannot see, open, or modify any other file in your Google Drive.</p>
+
+<p>When you connect your account, the extension creates a single new spreadsheet in your Drive for your applications. That spreadsheet is owned by you. You can open, edit, export, share, or delete it at any time, and revoking the extension's access does not delete it.</p>
+
+<p>You can revoke JobTrackr's access to your Google account at any time from your Google Account's security settings, or by clicking "Disconnect Google Account" in the extension.</p>
 
 <h2>Where your data is stored</h2>
-<p>Your job-application data lives in two places, both under your control:</p>
+<p>Your data lives in two places, both under your control:</p>
 <ul>
-  <li><strong>Your browser's local storage</strong>, used to hold recently detected jobs and your settings (such as your connected sheet URL and your list of enabled sites) on your own device.</li>
-  <li><strong>Your Google Sheet</strong>, which you own and can view, edit, export, or delete at any time.</li>
+  <li><strong>Your own Google Sheet</strong>, stored in your Google Drive, which holds your saved job applications.</li>
+  <li><strong>Your browser's local storage</strong>, which holds your settings (such as your list of enabled sites and a reference to your spreadsheet), a temporarily detected job awaiting your confirmation, and a short-lived access token used to communicate with Google.</li>
 </ul>
-<p>JobTrackr does not operate its own database of your applications and does not retain your job data on any server we control beyond passing it to your Google Sheet.</p>
+
+<p><strong>The developer does not operate a server, database, or backend of any kind that receives your data.</strong> Requests go directly from your browser to Google's APIs, authenticated with your own credentials. Your job applications are never transmitted to, stored by, or visible to the developer.</p>
+
+<h2>Access tokens</h2>
+<p>The temporary access token issued by Google is stored locally in your browser and is used solely to authorize requests to the Google Sheets API on your behalf. It expires automatically after approximately one hour and is removed when you disconnect your account. It is never transmitted anywhere other than to Google.</p>
 
 <h2>What we do not do</h2>
 <ul>
   <li>We do <strong>not</strong> sell, rent, or share your data with third parties.</li>
   <li>We do <strong>not</strong> use your data for advertising or build advertising profiles.</li>
-  <li>We do <strong>not</strong> track your general browsing history. The extension only reads job-posting details on pages where you use it, not your activity across the web.</li>
+  <li>We do <strong>not</strong> track your general browsing history. The extension only reads job-posting details on pages where it is active, not your activity across the web.</li>
   <li>We do <strong>not</strong> collect names, email addresses, passwords, or payment information.</li>
+  <li>We do <strong>not</strong> operate any server that receives your job-application data.</li>
 </ul>
 
-<h2>Permissions</h2>
-<p>JobTrackr requests access to websites in order to detect job postings wherever they appear. Because job postings can be published on a wide range of career sites and company pages — not only major job boards — the extension requires broad site access to identify postings using standardized job-posting data. This access is used solely to read job-posting information on pages where the extension is active. It is not used to read or transmit other page content.</p>
+<h2>Website access</h2>
+<p>JobTrackr requests access to websites in order to detect job postings wherever they appear. Because job postings can be published on a wide range of career sites and company pages — not only major job boards — the extension requires broad site access to identify postings using standardized job-posting data. This access is used solely to read job-posting information on pages where the extension is active. It is not used to read, collect, or transmit any other page content.</p>
 
 <h2>Third-party services</h2>
-<p>JobTrackr writes your saved applications to Google Sheets on your behalf. Your use of Google Sheets is governed by Google's own privacy policy and terms. JobTrackr only sends your job-application data to the specific sheet you connect.</p>
+<p>JobTrackr uses Google's authentication and Google Sheets services on your behalf. Your use of your Google account and Google Sheets is governed by Google's own privacy policy and terms. JobTrackr sends your job-application data only to the specific spreadsheet created for you in your own Google Drive.</p>
 
 <h2>Your choices</h2>
 <ul>
-  <li>You can remove or disable supported sites at any time in the extension's settings.</li>
-  <li>You can disconnect your Google Sheet at any time.</li>
-  <li>You can delete any or all of your data directly in your Google Sheet, and clear local data by removing the extension.</li>
+  <li>You can add or remove supported sites at any time in the extension's settings.</li>
+  <li>You can disconnect your Google account at any time from the extension's settings, or revoke access from your Google Account security settings.</li>
+  <li>You can view, edit, export, or delete any or all of your data directly in your Google Sheet.</li>
+  <li>You can clear all local data by removing the extension.</li>
 </ul>
 
 <h2>Children</h2>

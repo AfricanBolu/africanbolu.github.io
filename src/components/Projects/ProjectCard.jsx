@@ -1,28 +1,30 @@
 import PropTypes from 'prop-types';
 import styles from './ProjectCard.module.css';
 
-const ProjectCard = ({ project: { title, img, desc, stack, demo, source } }) => {
+const ProjectCard = ({ project: { title, img, desc, stack, demo, source, url } }) => {
   return (
-    <div className={styles.container}>
-      <img src={img} alt={`Image of project ${title} `} className={styles.projectPic} />
-      <h3 className={styles.title}>{title}</h3>
-      <p className={styles.description}>{desc}</p>
-      <ul className={styles.stack}>
-        {stack.map((stack, id) => (
-          <li key={id} className={styles.stackItem}>
-            {stack}
-          </li>
-        ))}
-      </ul>
-      <div className={styles.links}>
-        <a href={demo} className={styles.linkBtn} target="_blank">
-          Demo
-        </a>
-        <a href={source} className={styles.linkBtn} target="_blank">
-          Source
-        </a>
+    <a href={url}>
+      <div className={styles.container}>
+        <img src={img} alt={`Image of project ${title} `} className={styles.projectPic} />
+        <h3 className={styles.title}>{title}</h3>
+        <p className={styles.description}>{desc}</p>
+        <ul className={styles.stack}>
+          {stack.map((stack, id) => (
+            <li key={id} className={styles.stackItem}>
+              {stack}
+            </li>
+          ))}
+        </ul>
+        <div className={styles.links}>
+          <a href={demo} className={styles.linkBtn} target="_blank">
+            Demo
+          </a>
+          <a href={source} className={styles.linkBtn} target="_blank">
+            Source
+          </a>
+        </div>
       </div>
-    </div>
+    </a>
   );
 };
 
@@ -34,6 +36,7 @@ ProjectCard.propTypes = {
     stack: PropTypes.arrayOf(PropTypes.string).isRequired, // Add this line
     demo: PropTypes.string.isRequired,
     source: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
   }).isRequired,
 };
 

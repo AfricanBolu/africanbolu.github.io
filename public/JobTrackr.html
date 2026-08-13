@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="22j4c-3WxC17RXuz_M_kPArz_iCY0gMlKA4USWTRW30" />
+    <title>
+      JobTrackr — Track job applications straight to your own Google Sheet
+    </title>
+    <meta
+      name="description"
+      content="JobTrackr is a Chrome extension that automatically detects job postings as you browse and saves them to a Google Sheet you own."
+    />
+    <style>
+      :root {
+        --ink: #1a1a2e;
+        --muted: #64748b;
+        --line: #e2e8f0;
+        --blue: #2563eb;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+        line-height: 1.6;
+        color: var(--ink);
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 48px 20px 80px;
+      }
+      header {
+        margin-bottom: 2.5rem;
+      }
+      h1 {
+        font-size: 2.25rem;
+        margin: 0 0 0.35rem;
+      }
+      .tagline {
+        font-size: 1.15rem;
+        color: var(--muted);
+        margin: 0 0 1.5rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+        margin-top: 2.5rem;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 0.3rem;
+      }
+      a {
+        color: var(--blue);
+      }
+      ul {
+        padding-left: 1.25rem;
+      }
+      li {
+        margin-bottom: 0.45rem;
+      }
+      .grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        margin-top: 1rem;
+      }
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 1rem 1.1rem;
+      }
+      .card h3 {
+        margin: 0 0 0.35rem;
+        font-size: 1rem;
+      }
+      .card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      .steps {
+        counter-reset: step;
+        list-style: none;
+        padding-left: 0;
+      }
+      .steps li {
+        counter-increment: step;
+        padding-left: 2.2rem;
+        position: relative;
+        margin-bottom: 0.8rem;
+      }
+      .steps li::before {
+        content: counter(step);
+        position: absolute;
+        left: 0;
+        top: 0.1rem;
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 50%;
+        background: var(--blue);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+      .note {
+        background: #f8fafc;
+        border-left: 3px solid var(--blue);
+        padding: 0.9rem 1.1rem;
+        border-radius: 0 6px 6px 0;
+      }
+      footer {
+        margin-top: 3.5rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+      footer a {
+        margin-right: 1.1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>JobTrackr</h1>
+      <p class="tagline">
+        Track every job you apply to — automatically, in a Google Sheet you own.
+      </p>
+    </header>
+
+    <p>
+      JobTrackr is a Chrome extension for job seekers. As you browse job
+      postings, it reads the details off the page and saves them to a
+      spreadsheet in your own Google Drive. No copy-pasting, no re-typing, and
+      no third-party service holding your job-search history.
+    </p>
+
+    <h2>What it does</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Detects postings automatically</h3>
+        <p>
+          Reads job title, company, location, link, and salary where available.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Works beyond the big boards</h3>
+        <p>
+          Supports LinkedIn, Indeed, and Glassdoor, plus any career site that
+          publishes standard job-posting data.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Syncs to your own sheet</h3>
+        <p>
+          Creates a spreadsheet in your Google Drive. You own it, and can sort,
+          filter, or export it however you like.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Stays out of the way</h3>
+        <p>
+          Nothing is saved until you confirm it. Edit any entry, or add
+          applications manually.
+        </p>
+      </div>
+    </div>
+
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li>Install JobTrackr and connect your Google account.</li>
+      <li>
+        JobTrackr creates a spreadsheet in your Drive for your applications.
+      </li>
+      <li>
+        Browse job postings as normal. When one is detected, the extension asks
+        whether you applied.
+      </li>
+      <li>Confirm, and the job is written straight to your sheet.</li>
+    </ol>
+
+    <h2>Your data stays yours</h2>
+    <div class="note">
+      <p>
+        JobTrackr has <strong>no backend server</strong>. Your job applications
+        go directly from your browser to your own Google Sheet, authenticated
+        with your own Google account. Nothing is sent to, stored by, or visible
+        to the developer.
+      </p>
+    </div>
+    <p style="margin-top: 1rem">
+      The extension requests only the <code>drive.file</code> permission — the
+      narrowest Google Drive access available. It can only see the spreadsheet
+      it creates for you, and nothing else in your Drive. You can disconnect
+      your account at any time from the extension's settings.
+    </p>
+    <p>Full details are in the <a href="privacy.html">privacy policy</a>.</p>
+
+    <h2>Install</h2>
+    <p>
+      JobTrackr is available on the Chrome Web Store. It requires Google Chrome
+      and a Google account.
+    </p>
+
+    <h2>Support</h2>
+    <p>
+      Questions, bug reports, or feature requests:
+      <strong>oo222515@gmail.com</strong>
+    </p>
+
+    <footer>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="https://github.com/Bolemonrin/JobTrackr">Source on GitHub</a>
+    </footer>
+  </body>
+</html>

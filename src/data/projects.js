@@ -40,7 +40,7 @@ export const projects = [
         stack: ['React', 'Google Sheets', 'Node', 'TypeScript'],
         demo: 'https://youtu.be/DJp19Z-KiNs',
         source: 'https://github.com/bolemonrin/JobTrackr/',
-        url: '',
+        url: 'https://chromewebstore.google.com/detail/opkenlifdpnikccnplbngbpkhnnecinp?utm_source=item-share-cb',
     },
     {
         title: 'Spotify Party',

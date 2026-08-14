@@ -1,32 +1,60 @@
 import PropTypes from 'prop-types';
 import styles from './ProjectCard.module.css';
 
-const ProjectCard = ({ project: { title, img, desc, stack, demo, source, url } }) => {
-  function openLink() {
+const ProjectCard = ({ project, position, style }) => {
+  const { title, img, desc, stack, demo, source, url } = project;
+  const openLink = () => {
     console.log(url);
-    window.open(url, '_blank');
-  }
+    if (url) {
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
-    <div className={styles.container} onClick={openLink}>
+    <article className={styles.card} style={style} onClick={openLink} data-position={position}>
       <img src={img} alt={`Image of project ${title} `} className={styles.projectPic} />
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.description}>{desc}</p>
-      <ul className={styles.stack}>
-        {stack.map((stack, id) => (
-          <li key={id} className={styles.stackItem}>
-            {stack}
-          </li>
+      {/* <div className={styles.stack}>
+        {stack.map((tech) => (
+          <span key={tech}>{tech}</span>
         ))}
-      </ul>
-      <div className={styles.links}>
-        <a href={demo} className={styles.linkBtn} target="_blank">
-          Demo
-        </a>
-        <a href={source} className={styles.linkBtn} target="_blank">
-          Source
-        </a>
+      </div> */}
+      <div className={styles.content}>
+        <ul className={styles.stack}>
+          {stack.map((stack, id) => (
+            <li key={id} className={styles.stackItem}>
+              {stack}
+            </li>
+          ))}
+        </ul>
+        <div className={styles.links}>
+          {demo && (
+            <a
+              href={demo}
+              className={styles.linkBtn}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+            >
+              Demo
+            </a>
+          )}
+
+          {source && (
+            <a
+              href={source}
+              className={styles.linkBtn}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+            >
+              GitHub
+            </a>
+          )}
+        </div>
       </div>
-    </div>
+    </article>
   );
 };
 
@@ -40,6 +68,8 @@ ProjectCard.propTypes = {
     source: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
   }).isRequired,
+  position: PropTypes.number.isRequired,
+  style: PropTypes.object.isRequired,
 };
 
 export default ProjectCard;

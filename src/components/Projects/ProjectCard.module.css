@@ -1,40 +1,105 @@
 @import '../../vars.css';
-.container {
-    /* border: 3px solid white; */
-    /* border: 3px solid orange; */
-    /* position: relative; */
+.card {
+    position: absolute;
+    left: 50%;
+    top: 55%;
     display: flex;
     flex-direction: column;
+    width: 300px;
+    min-height: 420px;
+    padding: 1.25rem;
+    border-radius: 1rem;
     background: linear-gradient(
         180deg,
         rgba(87, 108, 188, 1) 0%,
         rgba(19, 42, 83, 1) 100%
     );
-    /* background-repeat: no-repeat; */
-    box-shadow: 0px 16px 14px 0 rgba(4, 21, 45, 1);
-    padding: 1.5rem;
-    /* max-width: 550px; */
-    border-radius: 10px;
-    color: var(--color-text);
-    /* align-items: center; */
-    height: 100%;
-    /* margin-top: 76px;
-    margin-left: 10%;
-    margin-right: 10%;
-    z-index: 1; */
-    width: 350px; /* Adjust this pixel value to match the exact size you prefer */
-    max-width: 100%; /* Ensures the card shrinks gracefully on narrow phone screens */
+    border: 1px solid var(--color-primary);
+    cursor: pointer;
+    transform: translate(-50%, -50%) translateX(var(--x)) translateZ(var(--z))
+        rotateY(var(--rotate)) scale(var(--scale));
+
+    opacity: var(--opacity);
+
+    z-index: var(--z-index);
+
+    transform-style: preserve-3d;
+
+    transition:
+        transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+        opacity 0.45s ease,
+        box-shadow 0.45s ease,
+        filter 0.45s ease;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* .card[data-position='-2'] {
+    --x: -430px;
+    --z: -170px;
+    --rotate: 38deg;
+    --scale: 0.78;
+    --z-index: 1;
+} */
+
+/* .card[data-position='-1'] {
+    --x: -220px;
+    --z: -70px;
+    --rotate: 22deg;
+    --scale: 0.9;
+    --z-index: 2;
+}
+
+.card[data-position='0'] {
+    --x: 0px;
+    --z: 20px;
+    --rotate: 0deg;
+    --scale: 1;
+    --z-index: 5;
+}
+
+.card[data-position='1'] {
+    --x: 220px;
+    --z: -70px;
+    --rotate: -22deg;
+    --scale: 0.9;
+    --z-index: 2;
+}
+
+.card[data-position='2'] {
+    --x: 430px;
+    --z: -170px;
+    --rotate: -38deg;
+    --scale: 0.78;
+    --z-index: 1;
+} */
+
+.card:hover {
+    transform: translate(-50%, -50%) translateX(var(--x)) translateY(-25px)
+        translateZ(180px) rotateY(0deg) scale(1.08);
+
+    z-index: 100;
+
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+
+    filter: brightness(1.08);
 }
 
 .projectPic {
     /* border: 3px solid pink; */
     width: 100%;
-    /* height: auto; */
+    height: 170px;
     border-radius: 10px;
     object-fit: cover;
     /* max-height: 250px; */
     margin-bottom: 1rem;
+    display: block;
     aspect-ratio: 16/9;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
 }
 
 .title {
@@ -108,19 +173,50 @@
     transition: all 0.3s ease;
 }
 
-.container:hover {
-    transform: translateY(-5px); /* Subtle lift on hover */
-    /* transition: transform 0.3s ease; */
+/* .container:hover {
+    transform: translateY(-5px); Subtle lift on hover
+    transition: transform 0.3s ease;
     transition: transform 0.5s ease;
 
     .stackItem {
         background: var(--color-secondary);
     }
     cursor: pointer;
-}
+} */
 
 .linkBtn:hover {
     background: var(--color-secondary);
     transition: all 0.3s ease;
     transform: scale(1.05);
+}
+
+/* =========================
+   Responsive
+   ========================= */
+
+@media screen and (max-width: 900px) {
+    .card {
+        width: 270px;
+        min-height: 390px;
+    }
+
+    .projectPic {
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        width: 250px;
+        min-height: 370px;
+    }
+
+    .projectPic {
+        height: 140px;
+    }
+
+    .card:hover {
+        transform: translate(-50%, -50%) translateX(var(--x)) translateY(-20px)
+            translateZ(120px) rotateY(0deg) scale(1.04);
+    }
 }

@@ -88,11 +88,11 @@
     transition: background-size 0.5s ease;
 }
 
-.aboutItems img {
-    /* border: 3px solid blue; */
+/* .aboutItems img {
+    border: 3px solid blue; */
     /* width: 30px; */
-    /* left: -25px; */
-}
+    /* left: -25px;
+} */
 
 .aboutItems h3 {
     /* border: 3px solid purple; */
@@ -145,11 +145,11 @@
     .container {
         padding: 3rem 2rem;
     }
-    
+
     .aboutPic {
         width: 40%;
     }
-    
+
     .aboutContent {
         width: 55%;
     }
@@ -161,12 +161,12 @@
         flex-direction: column;
         gap: 2rem;
     }
-    
+
     .aboutPic {
         width: 60%;
         max-width: 300px;
     }
-    
+
     .aboutContent {
         width: 100%;
     }

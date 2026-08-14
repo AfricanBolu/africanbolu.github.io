@@ -1,0 +1,306 @@
+/* .container {
+  margin-top: 8rem;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 4rem 0;
+    background-color: rgba(12, 12, 12, 0.6);
+    position: relative;
+    z-index: 1;
+    border-radius: 15px;
+}
+
+.heading {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+Main layout
+
+.inner {
+    display: flex;
+    min-height: 340px;
+}
+
+=========================
+   Company tabs
+   =========================
+
+.tabs {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    width: max-content;
+    min-width: 160px;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 55px;
+
+    padding: 0 20px;
+
+    border: none;
+    border-left: 2px solid var(--color-secondary);
+
+    background: transparent;
+
+    color: var(--color-secondary);
+
+    font-size: 0.9rem;
+    text-align: left;
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.tab:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.tab.active {
+    color: var(--color-primary);
+}
+
+Moving indicator
+
+.highlight {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 2px;
+    height: 55px;
+
+    background: var(--color-primary);
+
+    transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+=========================
+   Experience panel
+   =========================
+
+.panels {
+    flex: 1;
+    margin-left: 30px;
+}
+
+.panel {
+    padding: 10px 5px;
+
+    animation: fadeIn 0.25s ease;
+}
+
+.role {
+    margin: 0 0 6px;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.role span {
+    color: var(--color-primary);
+}
+
+.role a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.role a:hover {
+    text-decoration: underline;
+}
+
+.date {
+    margin-bottom: 25px;
+
+    color: var(--color-secondary);
+
+    font-size: 0.85rem;
+}
+
+.panel ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.panel li {
+    margin-bottom: 12px;
+
+    line-height: 1.6;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
+
+.container {
+    /* width: 100%; */
+    margin-top: 8rem;
+    margin-left: 10%;
+    margin-right: 50%;
+    padding: 4rem;
+    background-color: rgba(12, 12, 12, 0.6);
+    position: relative;
+    z-index: 1;
+    border-radius: 15px;
+}
+
+.heading {
+    margin-bottom: 2rem;
+}
+
+.experience {
+    display: flex;
+    width: 100%;
+    min-height: 300px;
+}
+
+/* Left Side */
+.tabs {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    flex-shrink: 0;
+
+    width: 170px;
+}
+
+/* Buttons */
+.tab {
+    position: relative;
+
+    width: 100%;
+    min-height: 55px;
+
+    padding: 0 1rem;
+
+    border: none;
+    border-left: 2px solid var(--color-secondary);
+
+    background: transparent;
+
+    color: var(--color-secondary);
+
+    font-family: inherit;
+    font-size: 0.9rem;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.tab:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.tab.active {
+    color: var(--color-primary);
+}
+
+/* moving indicator */
+.indicator {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 2px;
+    height: 55px;
+
+    background: var(--color-primary);
+
+    transition: transform 0.3s ease;
+}
+
+/* right-side */
+.content {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 0 1rem 1rem 2rem;
+
+    animation: fadeIn 0.3s ease;
+}
+
+/* role */
+.role {
+    margin: 0 0 0.4rem;
+
+    font-size: 1.4rem;
+    line-height: 1.3;
+}
+
+.role span {
+    color: var(--color-primary);
+}
+
+.role a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.role a:hover {
+    text-decoration: underline;
+}
+
+/* date */
+.date {
+    margin: 0 0 1.5rem;
+
+    color: var(--color-secondary);
+
+    font-size: 0.85rem;
+}
+
+/* bullets */
+.description {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.description li {
+    margin-bottom: 0.8rem;
+
+    line-height: 1.6;
+}
+
+/* animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

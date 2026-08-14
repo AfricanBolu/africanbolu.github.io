@@ -13,6 +13,10 @@
     background-color: var(--color-secondary);
 }
 
+/* .content {
+    max-width: 600px;
+} */
+
 .content h2 {
     font-size: 2rem;
     font-weight: 700;

@@ -22,6 +22,7 @@ export const projects = [
         stack: ['TMDB', 'Python', 'OPENAI', 'LangChain', 'HuggingFace'],
         demo: 'https://www.example.com',
         source: 'https://github.com/bolemonrin/Movie-Chatbot',
+        url: 'https://github.com/bolemonrin/Movie-Chatbot',
     },
     // {
     //     title: 'BudgetYou',

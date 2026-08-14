@@ -19,12 +19,16 @@ const ProjectCard = ({ project: { title, img, desc, stack, demo, source, url } }
         ))}
       </ul>
       <div className={styles.links}>
-        <a href={demo} className={styles.linkBtn} target="_blank">
-          Demo
-        </a>
-        <a href={source} className={styles.linkBtn} target="_blank">
-          Source
-        </a>
+        {demo && (
+          <a href={demo} className={styles.linkBtn} target="_blank">
+            Demo
+          </a>
+        )}
+        {source && (
+          <a href={source} className={styles.linkBtn} target="_blank">
+            Source
+          </a>
+        )}
       </div>
     </div>
   );
